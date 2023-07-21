@@ -10,7 +10,7 @@ import { useToast } from '@chakra-ui/react';
 
 import { useState, useContext } from 'react';
 import { addCurrencySymbol } from '../../../utils/helpers';
-import { addToCart } from '../../cart/helpers';
+import { addToCart } from '../../cart/utils/storage';
 import { CartContext } from '../../cart/context/CartContext';
 import { CartContextType } from '../../cart/types';
 

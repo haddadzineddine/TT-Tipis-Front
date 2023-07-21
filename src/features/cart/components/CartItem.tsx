@@ -8,7 +8,7 @@ import {
     Divider, Badge, Text, Image, VStack, Button, Icon
 } from '@chakra-ui/react';
 import { addCurrencySymbol } from '../../../utils/helpers';
-import { removeFromCart, updateProductQuantity } from '../helpers';
+import { removeFromCart, updateProductQuantity } from '../utils/storage';
 import { CartContextType } from '../types';
 import { CartContext } from '../context/CartContext';
 import { AiOutlineClose } from 'react-icons/ai';

@@ -20,6 +20,4 @@ export type CartItem = {
 export type CartContextType = {
     cartItems: CartItem[];
     setCartItems: (items: CartItem[]) => void;
-}
-
-export type CartWithoutId = Omit<Cart, 'id'>;
+};

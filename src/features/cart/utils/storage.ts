@@ -1,6 +1,6 @@
-import storage from "../../utils/storage";
-import { Product } from "../product/types";
-import { CartItem } from "./types";
+import { Product } from "../../product/types";
+import { CartItem } from "../types";
+import storage from "../../../utils/storage";
 
 
 

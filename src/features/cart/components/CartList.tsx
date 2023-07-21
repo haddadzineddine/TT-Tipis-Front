@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState, useContext } from 'react';
 import { CartItem } from "./CartItem";
-import { getCartItems } from "../helpers";
+import { getCartItems } from "../utils/storage";
 import { CartContext } from "../context/CartContext";
 import { createOrder } from "../api/createOrder";
 import { useToast } from '@chakra-ui/react';
@@ -40,10 +40,9 @@ export const CartList = (drawer: CartListProps) => {
 
         if (status === 'success') {
             setCartItems([]);
+            const newProducts = await getProducts();
+            setProducts(newProducts);
         }
-
-        const newProducts = await getProducts();
-        setProducts(newProducts);
 
         toast({
             title: status,
