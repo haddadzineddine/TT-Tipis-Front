@@ -1,5 +1,3 @@
-
-
 import { HStack, VStack, Center, Text, Button } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 
