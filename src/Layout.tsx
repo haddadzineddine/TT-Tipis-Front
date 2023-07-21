@@ -54,7 +54,7 @@ export const Layout = ({ children }: LayoutProps) => {
                                 </Button>
 
                                 <Button bg='transparent' borderRadius='16px' p={2} ref={btnRef} onClick={onOpen}>
-                                    <Icon as={AiOutlineShoppingCart} w={8} h={8} />
+                                    <Icon as={AiOutlineShoppingCart} w={8} h={8} />({cartItems.length})
                                 </Button>
                             </HStack>
                         </HStack>
