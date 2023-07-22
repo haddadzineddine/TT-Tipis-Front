@@ -23,8 +23,8 @@ type CartItemProps = {
 
 export const CartItem = (props: CartItemProps) => {
 
-    const { setCartItems } = useContext(CartContext) as CartContextType;
     const toast = useToast();
+    const { setCartItems } = useContext(CartContext) as CartContextType;
 
     const changeProductQuantity = (ProductName: string, value: number) => {
         const newCart = updateProductQuantity(ProductName, value, true);
@@ -56,7 +56,7 @@ export const CartItem = (props: CartItemProps) => {
                         <Text fontWeight='bold' fontSize='xl'>{props.product.name}</Text>
                         <Badge colorScheme='blue'>{props.product.category}</Badge>
                         <Text>{addCurrencySymbol(props.product.price)}</Text>
-                        <Badge colorScheme={props.quantity > 0 ? 'green' : 'red'}>{props.product.quantity} left</Badge>
+                        <Badge colorScheme={props.quantity > props.product.quantity ? 'red' : 'green'}>{props.product.quantity} left</Badge>
                     </VStack>
                 </HStack>
 
@@ -69,6 +69,7 @@ export const CartItem = (props: CartItemProps) => {
                         defaultValue={props.quantity}
                         onChange={(value) => changeProductQuantity(props.product.name, +value)}
                         min={1}
+                        max={props.product.quantity}
                     >
                         <NumberInputField w={20} />
                         <NumberInputStepper>
